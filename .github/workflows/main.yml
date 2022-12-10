@@ -22,7 +22,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-           az cdn endpoint purge --content-paths  "/*" --profile-name "CDN-ResumeWebsite-002" --name "CDN-ResumeWebsite-002.azureedge.net" --resource-group "Storage-ResumeWebsite-EastUS-001"
+           az cdn endpoint purge --content-paths  "/*" --profile-name "CDN-ResumeWebsite-EastUS-001" --name "CDN-ResumeWebsite-002.azureedge.net" --resource-group "Storage-ResumeWebsite-EastUS-001"
 
   # Azure logout
     - name: logout
