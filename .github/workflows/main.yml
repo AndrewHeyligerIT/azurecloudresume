@@ -17,7 +17,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name resumewebsite001 --connection-string ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }} --auth-mode key -d '$web' -s .
+            az storage blob upload-batch --account-name resumewebsite001 --connection-string 'DefaultEndpointsProtocol=https;AccountName=resumewebsite001;AccountKey=bCqz/GNX8ew70s9CSsQNrtLJbo1SaY2lAdUsctkJxDOGsKbqD2J+TOcb3kLL3O/XpzMI5nDX2OH6+AStZjbC6A==;EndpointSuffix=core.windows.net' --auth-mode key -d '$web' -s .
    # - name: Purge CDN endpoint
    #   uses: azure/CLI@v1
    #   with:
