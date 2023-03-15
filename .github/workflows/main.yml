@@ -12,12 +12,16 @@ jobs:
     - uses: azure/login@v1
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-
+    
+    
+    
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name resumewebsite001 --overwrite --auth-mode login -d '$web' -s https://github.com/AndrewHeyligerIT/azurecloudresume.git/index.html
+            az storage blob upload-batch --account-name resumewebsite001  --overwrite --auth-mode login -d '$web' -s 
+      env:
+        AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}  
    # - name: Purge CDN endpoint
    #   uses: azure/CLI@v1
    #   with:
