@@ -19,9 +19,8 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name resumewebsite001  --overwrite --auth-mode login -d '$web' -s 
-      env:
-        AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}  
+            az storage blob upload-batch --account-name resumewebsite001  --overwrite --auth-mode login -d '$web' -s . 
+            
    # - name: Purge CDN endpoint
    #   uses: azure/CLI@v1
    #   with:
