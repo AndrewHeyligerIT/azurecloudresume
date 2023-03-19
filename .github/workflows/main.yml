@@ -23,7 +23,7 @@ jobs:
       with:
         inlineScript: |
            az cdn endpoint purge --content-paths  "/*" --profile-name "CDN-ResumeWebsite-EastUS-001" --name "CDN-ResumeWebsite-002" --resource-group "Storage-ResumeWebsite-EastUS-001"
-        
+            # working 
   # Azure logout
     - name: logout
       run: |
